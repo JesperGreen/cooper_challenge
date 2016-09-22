@@ -2,6 +2,7 @@ function Person(attr) {
   this.gender = attr.gender;
   this.age = attr.age;
 
+
   Person.prototype.cooperDistance = function (distance) {
     if (this.gender.toUpperCase() = 'MALE') {
       this.cooperMessage = this.getCooperResultsForMales(distance);
@@ -10,10 +11,11 @@ function Person(attr) {
     }
   };
 
+
   Person.prototype.getCooperResultsForMales = function(distance) {
     var age = this.age;
     switch (true) {
-      case (age.between(13,14)):
+      case (age.between(13, 14)):
         switch (true) {
           case (distance <= 2099):
             return 'Poor';
@@ -27,6 +29,20 @@ function Person(attr) {
             return 'Excellent';
         }
         break;
+
+      case (age.between(15, 16)):
+        switch (true) {
+          case (distance <= 2199):
+            return 'Poor';
+          case (distance.between(2200, 2299)):
+            return 'Below average';
+          case (distance.between(2300, 2499)):
+            return 'Average';
+          case (distance.between(2500, 2799)):
+            return 'Above average';
+          case (distance >= 2800):
+            return 'Excellent';
+        }
     }
   }
 };
