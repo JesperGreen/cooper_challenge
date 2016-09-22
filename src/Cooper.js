@@ -126,4 +126,23 @@ function Person(attr) {
         break;
     }
   }
+
+
+  Person.prototype.getCooperResultsforFemales = function(distance) {
+    var age = this.age;
+    switch (true) {
+      case (age.between(13, 14)):
+        switch (true) {
+          case (distance < 1500):
+            return 'Poor';
+          case (distance.between(1500, 1599)):
+            return 'Below average';
+          case (distance.between(1600, 1899)):
+            return 'Average';
+          case (distance.between(1900, 2000)):
+            return 'Above average';
+          case (distance > 2000):
+            return 'Excellent';
+        }
+        break;
 };
