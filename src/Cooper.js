@@ -9,4 +9,14 @@ function Person(attr) {
       this.cooperMessage = this.getCooperResultsforFemales(distance);
     }
   };
+
+  Person.prototype.getCooperResultsForMales = function(distance) {
+    var age = this.age;
+    switch (true) {
+      case (age.between(13,14)):
+        switch (true) {
+          
+        }
+    }
+  }
 };
