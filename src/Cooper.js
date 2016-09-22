@@ -58,6 +58,24 @@ function Person(attr) {
             return 'Above average';
           case (distance > 3000):
             return 'Excellent';
+        }
+        break;
+
+
+      case (age.between(20, 29)):
+        switch (true) {
+          case (distance < 1600):
+            return 'Poor';
+          case (distance.between(1600, 2199)):
+            return 'Below average';
+          case (distance.between(2200, 2399)):
+            return 'Average';
+          case (distance.between(2400, 2799)):
+            return 'Above average';
+          case (distance >= 2800):
+            return 'Excellent';
+        }
+        break;
     }
   }
 };
